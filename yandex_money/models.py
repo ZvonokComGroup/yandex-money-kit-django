@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-
 from __future__ import unicode_literals
 from uuid import uuid4
 
 import six
 from django.conf import settings
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 
 from .signals import payment_process
 from .signals import payment_completed
@@ -16,7 +13,6 @@ def get_default_as_uuid():
     return six.text_type(uuid4()).replace('-', '')
 
 
-@python_2_unicode_compatible
 class Payment(models.Model):
     class STATUS:
         PROCESSED = 'processed'
