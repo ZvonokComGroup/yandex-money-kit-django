@@ -13,6 +13,8 @@ db.sqlite3
 *.swo
 *.swn
 .svn
+*.wpr
+*.wpu
 *.orig
 *.egg-info
 dump.rdb
